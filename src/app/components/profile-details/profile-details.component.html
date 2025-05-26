@@ -1,0 +1,37 @@
+<div class="content-column d-flex flex-column flex-nowrap px-4 overflow-auto">
+    <div class="header">
+        <h4 id="user-heading">{{ profileData.name }}</h4>
+    </div>
+    <div class="user-profile-container d-flex justify-content-between gap-3 my-2 position-relative">
+        <div class="d-flex flex-column" style="flex:0 0 50%">
+            <div>
+                <div class="loading-card mobile-no-top-margin d-flex flex-column bg-white px-4 py-3 rounded-3">
+                    <h5 class="mb-0">{{ "profile.userDetail" | translate }}</h5>
+                    <hr>
+                    <div class="d-flex flex-column justify-content-between">
+                        <div class="d-flex justify-content-between mb-2">
+                            <label for="user-name" class="text-uppercase w-50">{{"profile.username" | translate}}</label>
+                            <span id="user-name" class="light-text w-50">{{ profileData.userName }}</span>
+                        </div>
+                        <div class="d-flex justify-content-between my-2">
+                            <label for="user-email" class="text-uppercase w-50">{{"profile.email" | translate}}</label>
+                            <span id="user-email" class="light-text w-50">{{profileData.userEmail}}</span>
+                        </div>
+                        <div class="d-flex justify-content-between my-2">
+                            <label for="user-status" class="text-uppercase w-50">{{"profile.status" | translate}}</label>
+                            <span id="user-status" class="light-text w-50">{{ profileData.isActive ? "Active" : "Inactive" }}</span>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <label for="user-password" class="text-uppercase w-50">{{"profile.password" | translate}}</label>
+                            <span id="user-password" class="light-text w-50">Last modified on {{ profileData.modifiedOn | date }}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-no-bot-margin d-flex justify-content-end my-3 gap-3">
+                    <a [routerLink]="['change-password']" class="button-primary" style="width:180px">{{ "profileData.changePassword" | translate }}</a>
+                    <a [routerLink]="['edit-profile']" class="button-primary" style="width:180px">{{ "profileData.editDetails" | translate }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

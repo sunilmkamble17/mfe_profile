@@ -1,0 +1,26 @@
+{
+    "common": {
+        "save": "Save",
+        "cancel": "Cancel",
+        "backTo": "back to"
+    },
+    "profile": {
+        "userProfile": "User profile",
+        "userDetail": "User Details",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "email": "Email",
+        "username": "Username",
+        "status": "Status",
+        "password": "Password",
+        "changePassword": "Change Password",
+        "editDetails": "Edit Details"
+    },
+    "profileChangePassword": {
+        "userProfile": "User profile",
+        "title": "Change Password",
+        "currentPassword": "Current Password",
+        "newPassword": "New Password",
+        "confirmNewPassword": "Confirm New Password"
+    }
+}
