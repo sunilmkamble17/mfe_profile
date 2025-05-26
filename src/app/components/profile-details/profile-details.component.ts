@@ -23,10 +23,7 @@ export class ProfileDetailsComponent {
 
   constructor(
     private translate: TranslateService
-  ) {
-    translate.setDefaultLang('en');
-    translate.use('en');
-  }
+  ) {}
 
   ngOnInit(): void {
     this.translate.setDefaultLang('en');

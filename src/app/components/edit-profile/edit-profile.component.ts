@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterLink } from '@angular/router';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 
 @Component({
@@ -21,9 +21,13 @@ export class EditProfileComponent {
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
+    private translate: TranslateService
   ) {}
 
   ngOnInit(): void {
+    this.translate.setDefaultLang('en');
+    this.translate.use('en');
+
     this.editProfileForm = this.formBuilder.group(
       {
         firstName: [''],

@@ -29,6 +29,9 @@ export class ChangePasswordComponent {
   }
 
   ngOnInit(): void {
+    this.translate.setDefaultLang('en');
+    this.translate.use('en');
+
     this.name = `John Doe`;
 
     this.changePasswordForm = this.formBuilder.group(
