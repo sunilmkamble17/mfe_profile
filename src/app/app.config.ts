@@ -7,10 +7,10 @@ import { profileRoutes } from './app.routes';
 import { provideAnimations } from '@angular/platform-browser/animations';
 
 // const httpLoaderFactory: (http: HttpClient) => TranslateHttpLoader = (http: HttpClient) =>
-//   new TranslateHttpLoader(http, './i18n/', '.json');
+//   new TranslateHttpLoader(http, './assets/i18n/', '.json');
 
 export const httpLoaderFactory = (http: HttpClient) =>
-  new TranslateHttpLoader(http, new URL('./i18n/', import.meta.url).toString(), '.json');
+  new TranslateHttpLoader(http, `${new URL('./assets/i18n/', import.meta.url).toString()}/`, '.json');
 
 export const appConfig: ApplicationConfig = {
   providers: [
